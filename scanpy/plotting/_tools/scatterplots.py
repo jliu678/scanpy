@@ -1220,7 +1220,11 @@ def _get_color_source_vector(
             0
         ]  # TODO: Throw helpful error if this doesn't work
     if use_raw and value_to_plot not in adata.obs.columns:
+<<<<<<< Updated upstream
         adata.raw.var.index=np.reshape(adata.raw.var.values, -1)
+=======
+	adata.raw.var.index=np.reshape(adata.raw.var.values, -1)
+>>>>>>> Stashed changes
         values = adata.raw.obs_vector(value_to_plot)
     else:
         values = adata.obs_vector(value_to_plot, layer=layer)
